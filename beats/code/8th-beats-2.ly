@@ -32,16 +32,21 @@ slurform = {
   \override Slur #'height-limit = #0.5
 }
 
-%------------Snippits---------------%
-%{
-   Repeat Percents
-   -- number is for amount of repeated bars
-   -- to repeat 2 bars, add | between them
-\repeat percent 4 {}
+%------------Drum-Staff------------%
+#(define mydrums '(
+                    ( ridecymbal    cross    #f   5)	
+                    ( ridecymbala   xcircle  #f   5)
+                    ( crashcymbal   cross    #f   6)	
+                    ( splashcymbal  harmonic #f   6)
+                    ( pedalhihat    cross    #f  -5)	
+                    ( hihat         cross    #f   4)
+                    ( snare         default  #f   1)	
+                    ( sidestick     cross    #f   1)
+                    ( lowmidtom     default  #f   0)	
+                    ( lowtom        default  #f  -1)
+                    ( hightom       default  #f   3)	
+                    ( bassdrum      default  #f  -3)))
 
-High Hat and snare 8ths
-  hh8 hh8 <sn hh>8 hh8 hh8 hh8 <sn hh>8 hh8 
-%}
 %------------MUSIC-INPUT------------%
 \header {
   title = "1/8th Beats 2"
@@ -50,6 +55,7 @@ High Hat and snare 8ths
 
 \score {
   \new DrumStaff {
+    \set DrumStaff.drumStyleTable = #(alist->hash-table mydrums)
     \magnifyStaff #6/4
     \numericTimeSignature
     \repeat volta 4
@@ -71,7 +77,8 @@ High Hat and snare 8ths
 
 \score {
   \new DrumStaff {
-    \magnifyStaff #6/4
+  \set DrumStaff.drumStyleTable = #(alist->hash-table mydrums)
+   \magnifyStaff #6/4
     \numericTimeSignature
     \repeat volta 4
     \drummode {
@@ -92,6 +99,7 @@ High Hat and snare 8ths
 
 \score {
   \new DrumStaff {
+    \set DrumStaff.drumStyleTable = #(alist->hash-table mydrums)
     \magnifyStaff #6/4
     \numericTimeSignature
     \repeat volta 4
@@ -112,6 +120,7 @@ High Hat and snare 8ths
 
 \score {
   \new DrumStaff {
+    \set DrumStaff.drumStyleTable = #(alist->hash-table mydrums)
     \magnifyStaff #6/4
     \numericTimeSignature
     \repeat volta 4
@@ -133,6 +142,7 @@ High Hat and snare 8ths
 
 \score {
   \new DrumStaff {
+    \set DrumStaff.drumStyleTable = #(alist->hash-table mydrums)
     \magnifyStaff #6/4
     \numericTimeSignature
     \repeat volta 4
@@ -154,6 +164,7 @@ High Hat and snare 8ths
 
 \score {
   \new DrumStaff {
+    \set DrumStaff.drumStyleTable = #(alist->hash-table mydrums)
     \magnifyStaff #6/4
     \numericTimeSignature
     \repeat volta 4
@@ -175,6 +186,7 @@ High Hat and snare 8ths
 
 \score {
   \new DrumStaff {
+    \set DrumStaff.drumStyleTable = #(alist->hash-table mydrums)
     \magnifyStaff #6/4
     \numericTimeSignature
     \repeat volta 4
@@ -196,6 +208,7 @@ High Hat and snare 8ths
 
 \score {
   \new DrumStaff {
+    \set DrumStaff.drumStyleTable = #(alist->hash-table mydrums)
     \magnifyStaff #6/4
     \numericTimeSignature
     \repeat volta 4
