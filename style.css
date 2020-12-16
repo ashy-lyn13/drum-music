@@ -1,0 +1,50 @@
+/*Downloadable content grid layout*/
+* {
+        box-sizing: border-box;
+         }
+main {
+        font-family: Helvetica, Arial, sans-serif;
+}
+body {
+        margin: 0;
+}
+header {
+        background-color: palevioletred;
+        margin: 0px auto;
+        padding: 2rem;
+}
+footer {
+        background-color: slategray;
+        margin: 0px auto;
+        padding: 2rem;
+        height: 20vh;
+}
+@supports (display:grid) {
+        main {
+                margin: 0;
+        }
+        .container {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                grid-gap: 1em;
+        }
+}
+
+.container-item {
+        border: 1px solid black;
+        border-radius: 1rem;
+        display: flex;
+        flex-flow: column;
+        padding: 2rem;
+        margin: 1rem;
+}
+.odd {
+        background-color: whitesmoke;
+        margin: 0;
+        padding: 2rem;
+}
+.even {
+        background-color: lightgrey;
+        margin: 0;
+        padding: 2rem;
+}
