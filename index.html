@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css">
+        <script src="main.js"></script>
         <title>Ashlyn's Drum Lessons</title>
         </head>
 <body>
@@ -55,16 +56,26 @@
                         </div>
                         <div class="container">
                                 <!--TODO whole section should change color on hover and button activate when clicked-->
-                                <div class="container-item">
-                                        <button class="dropButton">Button</button>
-                                        <h3>Sticking Patterns</h3>
-                                        <div class="dropdownContent">
+                                <!--Attempt to create a large button as the icon-->
+                                <div class="dropdown">
+                                <button onclick="menuButton()" class="dropbtn">
+                                         <h3>Sticking Patterns</h3>
+                                </button>
+                                        <div id="myDropdown" class="dropdownContent">
                                                 <a href="/rudiments/stickingOne.pdf" download>Sticking Patterns 1</a>
                                                 <a href="/rudiments/stickingTwo.pdf" download>Sticking Patterns 2</a>
                                                 <a href="/rudiments/paradiddles.pdf" download>Paradiddles</a>
                                                 <a href="/rudiments/stickingOne.pdf" download>Triplet Sticking</a>
-
-
+                                        </div>
+                                </div>
+                                <div class="container-item">
+                                        <button onclick="menuButton()" class="dropButton">Button</button>
+                                        <h3>Sticking Patterns</h3>
+                                        <div id="myDropdown" class="dropdownContent">
+                                                <a href="/rudiments/stickingOne.pdf" download>Sticking Patterns 1</a>
+                                                <a href="/rudiments/stickingTwo.pdf" download>Sticking Patterns 2</a>
+                                                <a href="/rudiments/paradiddles.pdf" download>Paradiddles</a>
+                                                <a href="/rudiments/stickingOne.pdf" download>Triplet Sticking</a>
                                         </div>
                                 </div>
                                 <div class="container-item">
