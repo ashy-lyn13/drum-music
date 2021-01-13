@@ -15,3 +15,16 @@ window.onclick = function(event) {
                 }
         }
 }
+
+// Button menu visibility concept
+// show menu function
+        // get button item by class
+        // if menu visibility is set to hidden
+                // set menu visibility to visible
+        // else if menu is set to visible
+                //  set menu visibility to hidden 
+//  hide menu function
+        // check if menu button has been clicked
+                // if visibility is set to visible
+                        // set it to hidden
+
